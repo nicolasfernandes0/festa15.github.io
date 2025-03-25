@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -159,8 +160,8 @@
             color: #f8a5c2;
         }
     </style>
-    <script defer src="script.js"></script>
 </head>
+
 <body>
     <header>
         <div class="header-content">
@@ -168,6 +169,17 @@
             <p>Venha comemorar conosco este dia especial!</p>
         </div>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre" class="smooth-scroll">Sobre a Festa</a></li>
+            <li><a href="#confirmar-presenca" class="smooth-scroll">Confirmar Presença</a></li>
+            <li><a href="#galeria" class="smooth-scroll">Galeria de Fotos</a></li>
+            <li><a href="#presentes" class="smooth-scroll">Presentes</a></li>
+            <li><a href="#pagamento" class="smooth-scroll">Pagamento</a></li>
+            <li><a href="#contato" class="smooth-scroll">Contato</a></li>
+        </ul>
+    </nav>
 
     <section id="sobre">
         <h2>Sobre a Festa</h2>
@@ -177,7 +189,7 @@
 
     <section id="confirmar-presenca">
         <h2>Confirmar Presença</h2>
-        <form id="form-presenca">
+        <form id="form-presenca" method="POST" action="/confirmar-presenca">
             <label for="nome">Nome Completo:</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -219,9 +231,9 @@
         <h2>Formas de Pagamento</h2>
         <p>Escolha a forma de pagamento para seu presente:</p>
         <ul>
-            <li><a href="https://www.paypal.com" target="_blank">Pagar com PayPal</a></li>
-            <li><a href="https://www.pix.com" target="_blank">Pagar com PIX</a></li>
-            <li><a href="https://www.bancario.com" target="_blank">Transferência Bancária</a></li>
+            <li><a href="/pagamento/paypal" target="_blank">Pagar com PayPal</a></li>
+            <li><a href="/pagamento/pix" target="_blank">Pagar com PIX</a></li>
+            <li><a href="/pagamento/bancario" target="_blank">Transferência Bancária</a></li>
         </ul>
     </section>
 
@@ -230,19 +242,11 @@
         <p>Para mais informações, entre em contato pelo e-mail: contato@exemplo.com</p>
     </section>
 
-    <nav>
-        <ul>
-            <li><a href="#sobre" class="smooth-scroll">Sobre a Festa</a></li>
-            <li><a href="#confirmar-presenca" class="smooth-scroll">Confirmar Presença</a></li>
-            <li><a href="#galeria" class="smooth-scroll">Galeria de Fotos</a></li>
-            <li><a href="#presentes" class="smooth-scroll">Presentes</a></li>
-            <li><a href="#pagamento" class="smooth-scroll">Pagamento</a></li>
-            <li><a href="#contato" class="smooth-scroll">Contato</a></li>
-        </ul>
-    </nav>
-
     <footer>
         <p>&copy; 2025 Festa de 15 Anos de Malu. Todos os direitos reservados.</p>
     </footer>
+
+    <script defer src="script.js"></script>
 </body>
+
 </html>
