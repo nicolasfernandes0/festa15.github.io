@@ -7,102 +7,105 @@
     <style>
         /* Estilos gerais */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #ffe6f1;
+            background: linear-gradient(135deg, #f8a5c2, #f6c6ea);
             color: #333;
         }
 
         h1, h2 {
-            color: #d16d9e;
-            font-family: 'Courier New', Courier, monospace;
+            color: #5a2a83;
             text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-family: 'Lobster', cursive;
         }
 
-        h1 {
-            font-size: 3rem;
-            margin-top: 20px;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-top: 40px;
-        }
-
-        p {
+        /* Header */
+        header {
+            background-color: #f6c6ea;
             text-align: center;
-            font-size: 1.1rem;
+            padding: 30px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            color: #f8a5c2;
+            margin: 0;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
             color: #5a2a83;
         }
 
+        /* Navegação */
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            background-color: #ff6cbf;
+            background-color: #9b4f91;
             text-align: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav ul li {
-            display: inline;
-            margin: 0 20px;
+            display: inline-block;
+            margin: 0 15px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 15px;
+            padding: 14px 20px;
             display: inline-block;
+            border-radius: 30px;
             font-weight: bold;
-            font-size: 1.2rem;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         nav ul li a:hover {
-            background-color: #ff4e98;
-            transform: scale(1.1);
+            background-color: #f8a5c2;
+            color: #5a2a83;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: scale(1.05);
+            transition: all 0.3s ease;
         }
 
         /* Formulário */
         form {
-            margin: 40px auto;
-            padding: 30px;
+            margin: 30px auto;
+            padding: 20px;
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
         }
 
         input[type="text"], select {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
-            border: 2px solid #ff6cbf;
+            border: 2px solid #f8a5c2;
             border-radius: 8px;
             font-size: 1rem;
-            color: #5a2a83;
         }
 
         input[type="submit"] {
-            background-color: #ff6cbf;
+            background-color: #5a2a83;
             color: white;
             border: none;
-            padding: 12px 30px;
-            font-size: 1.2rem;
-            border-radius: 25px;
+            padding: 12px 20px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
         }
 
         input[type="submit"]:hover {
-            background-color: #ff4e98;
+            background-color: #9b4f91;
             transform: scale(1.05);
         }
 
@@ -111,84 +114,132 @@
             display: flex;
             gap: 15px;
             justify-content: center;
-            margin-top: 30px;
+            flex-wrap: wrap;
         }
 
         .fotos img {
-            width: 250px;
-            height: 180px;
+            width: 220px;
+            height: 160px;
             object-fit: cover;
-            border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
         .fotos img:hover {
             transform: scale(1.1);
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 15px;
-            background-color: #d16d9e;
+            padding: 20px;
+            background-color: #5a2a83;
             color: white;
             font-size: 1rem;
-            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
 
         /* Animação de feedback */
         #feedback {
             margin-top: 20px;
             font-size: 1.2em;
-            color: green;
-            text-align: center;
+            color: #28a745;
+            font-weight: bold;
         }
 
-        /* Estilos para as seções */
-        section {
-            padding: 40px 10%;
-            background-color: #fff;
-            margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Bordas e detalhes */
-        .header-content {
-            text-align: center;
-            padding: 50px;
-            background-color: #ff6cbf;
-            color: white;
-            border-radius: 0 0 30px 30px;
-        }
-
-        .header-content h1 {
-            font-size: 3rem;
-        }
-
-        .header-content p {
-            font-size: 1.2rem;
-        }
-
+        /* Efeitos de transição suave */
         .smooth-scroll {
             transition: color 0.3s ease;
         }
 
         .smooth-scroll:hover {
-            color: #ff4e98;
-        }
-
-        .presentes ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .presentes ul li {
-            font-size: 1.1rem;
-            color: #5a2a83;
-            padding: 10px 0;
-            border-bottom: 1px dashed #ff6cbf;
+            color: #f8a5c2;
         }
     </style>
-    <script defer src="script.js"></script
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Festa de 15 Anos da Malu</h1>
+            <p>Venha comemorar conosco este dia especial!</p>
+        </div>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre a Festa</h2>
+        <p>A festa será no dia [Data], às [Hora], no local [Local].</p>
+        <p>Este ano o tema será [Tema da Festa]. Não perca essa festa incrível!</p>
+    </section>
+
+    <section id="confirmar-presenca">
+        <h2>Confirmar Presença</h2>
+        <form id="form-presenca">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="presenca">Vai comparecer?</label>
+            <select id="presenca" name="presenca">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <input type="submit" value="Confirmar">
+        </form>
+        <div id="feedback"></div>
+    </section>
+
+    <section id="galeria">
+        <h2>Galeria de Fotos</h2>
+        <div class="fotos">
+            <img src="foto1.jpg" alt="Foto 1" class="foto">
+            <img src="foto2.jpg" alt="Foto 2" class="foto">
+        </div>
+    </section>
+
+    <section id="presentes">
+        <h2>Presentes</h2>
+        <p>Abaixo estão alguns dos presentes que [Nome] adoraria receber para este momento tão especial!</p>
+        <ul>
+            <li>Conjunto de Jantar</li>
+            <li>Experiência de Viagem</li>
+            <li>Roupas e acessórios</li>
+            <li>Contribuição para o fundo da festa</li>
+        </ul>
+        <p>Caso prefira dar um presente em dinheiro, você pode fazer uma contribuição através dos métodos abaixo.</p>
+    </section>
+
+    <section id="pagamento">
+        <h2>Formas de Pagamento</h2>
+        <p>Escolha a forma de pagamento para seu presente:</p>
+        <ul>
+            <li><a href="https://www.paypal.com" target="_blank">Pagar com PayPal</a></li>
+            <li><a href="https://www.pix.com" target="_blank">Pagar com PIX</a></li>
+            <li><a href="https://www.bancario.com" target="_blank">Transferência Bancária</a></li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Para mais informações, entre em contato pelo e-mail: contato@exemplo.com</p>
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre" class="smooth-scroll">Sobre a Festa</a></li>
+            <li><a href="#confirmar-presenca" class="smooth-scroll">Confirmar Presença</a></li>
+            <li><a href="#galeria" class="smooth-scroll">Galeria de Fotos</a></li>
+            <li><a href="#presentes" class="smooth-scroll">Presentes</a></li>
+            <li><a href="#pagamento" class="smooth-scroll">Pagamento</a></li>
+            <li><a href="#contato" class="smooth-scroll">Contato</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2025 Festa de 15 Anos de Malu. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
